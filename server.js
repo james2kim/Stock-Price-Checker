@@ -19,7 +19,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet.contentSecurityPolicy({
   directives: {
-    defaultSrc: ["'self'"]    
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'"]
+    
   }
 }));
 //Index page (static HTML)
